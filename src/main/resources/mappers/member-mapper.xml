@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC
+"-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="memberMapper">
+	
+	<!-- select 한 결과집합 ResultSet 에서 한 행씩 꺼내서
+	각 컬럼값들을 vo 객체의 각 필드에 저장 처리하는 작업
+	: 결과 매핑
+	리스트나 맵에 여러 객체를 저자 처리도 포함됨 -->
+	<resultMap type="Member" id="resultList">
+		<result property="userid" column="userid" />
+		<result property="userpwd" column="userpwd" />
+		<result property="username" column="username" />
+		<result property="gender" column="gender" />
+		<result property="age" column="age" />
+		
+		<result property="phone" column="phone" />
+		<result property="email" column="email" />
+		<result property="hobby" column="hobby" />
+		<result property="etc" column="etc" />
+		<result property="enroll_date" column="enroll_date" />
+		
+		<result property="lastmodified" column="lastmodified" />
+		<result property="login_ok" column="login_ok" />
+		<result property="admin" column="admin" />
+	</resultMap>
+	
+	<select id="selectLogin" parameterType="Member" resultType="Member">
+		select * from member 
+		where userid = #{userid} and userpwd = #{userpwd}
+		and login_ok = 'Y'
+	</select>
+	
+	<!-- 회원 전체 조회용 -->
+	<select id="selectMember" parameterType="string" resultType="Member">
+		select * from member
+		where userid = #{ uid }
+	</select>
+	
+	<!-- login_ok 값 변경용 -->
+	<update id="updateLoginOK" parameterType="Member">
+		update member 
+		set login_ok=#{login_ok}
+		where userid = #{userid}
+	</update>
+	
+	
+	<!-- 회원가입시 아이디 중복 체크 처리용 -->
+	<select id="selectCheckId" parameterType="string" resultType="_int">
+		select count(userid) from member
+		where userid = #{uid}
+	</select>
+	
+	<insert id="insertMember" parameterType="Member">
+		insert into Member(userid, userpwd, username, gender, age, phone, email, hobby, etc, enroll_date, lastmodified, login_ok, admin) 
+		values(#{userid}, #{userpwd}, #{username}, #{gender}, #{age}, #{phone}, #{email}, #{hobby}, #{etc}, default, default, default, default)
+	</insert>	
+	
+	<update id="updateMember" parameterType="Member" >
+		update member
+		set userpwd = #{userpwd},
+				age = #{age},
+				phone = #{phone},
+				email = #{email},
+				hobby = #{hobby},
+				etc = #{etc}
+		where userid = #{userid}
+	</update>
+	
+	<delete id="deleteMember" parameterType="string">
+		delete from member
+		where userid = #{uid}
+	</delete>
+	
+	<!-- 회원 전체 조회용 -->
+	<select id="selectList" resultMap="resultList">
+		select * from member
+	</select>
+	
+	<!-- 회원 검색 처리용 쿼리문 -->
+	<select id="selectSearchUserid" parameterType="string" resultMap="resultList">
+		select * from member 
+		where userid like '%' || #{ keyword } || '%'
+	</select>
+	
+	<select id="selectSearchGender" parameterType="string" resultMap="resultList">
+		select * from member 
+		where gender = #{ keyword }
+	</select>
+	
+		<select id="selectSearchAge" parameterType="_int" resultMap="resultList">
+		select * from member 
+		<if test="value == 60">
+			where age >= #{value}
+		</if>
+		<if test="value != 60">
+			where age between #{ keyword } and #{ keyword } + 9
+		</if>
+		
+	</select>
+	
+		<select id="selectSearchEnrollDate" parameterType="com.test.first.common.SearchDate" resultMap="resultList">
+		select * from member 
+		where enroll_date between  #{ begin } and #{end}
+	</select>
+	
+		<select id="selectSearchLoginOK" parameterType="string" resultMap="resultList">
+		select * from member 
+		where login_ok = #{ keyword }
+	</select>
+</mapper>

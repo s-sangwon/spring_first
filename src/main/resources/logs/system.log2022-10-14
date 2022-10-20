@@ -1,0 +1,150 @@
+[10:53:51][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[10:53:52][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1262 ms
+[10:53:52][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[10:53:54][INFO ][FrameworkServlet.java:547] - Completed initialization in 1760 ms
+[10:55:27][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[10:55:28][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1210 ms
+[10:55:28][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[10:55:30][INFO ][FrameworkServlet.java:547] - Completed initialization in 1784 ms
+[12:00:29][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[12:00:31][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1410 ms
+[12:00:31][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[12:00:33][INFO ][FrameworkServlet.java:547] - Completed initialization in 2057 ms
+[12:00:47][INFO ][TestController.java:18] - in testViewmethod
+[12:00:48][INFO ][Slf4jSpyLogDelegator.java:524] - 1. Connection opened
+[12:00:48][INFO ][Slf4jSpyLogDelegator.java:524] - 2. Connection opened
+[12:00:48][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.new Connection returned 
+[12:00:48][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.new Connection returned 
+[12:00:48][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.getAutoCommit() returned true
+[12:00:48][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.getAutoCommit() returned true
+[12:00:48][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.new PreparedStatement returned 
+[12:00:48][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.new PreparedStatement returned 
+[12:00:48][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.prepareStatement(select *
+		from (select ROWNUM rnum, noticeno, noticetitle, noticedate 
+		    from (select * from notice
+		    		 order by noticedate desc, noticeno desc))
+		where rnum >= 1 and rnum <=3) returned net.sf.log4jdbc.PreparedStatementSpy@2fdf4494
+[12:00:48][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.prepareStatement(select *
+		from (select ROWNUM rnum, board_num, board_title, board_readcount 
+		    from (select * from board
+		    		where board_lev=1
+		    		order by board_readcount desc))
+		where rnum >= 1 and rnum <=3) returned net.sf.log4jdbc.PreparedStatementSpy@3878c6ac
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:357] - select * from (select ROWNUM rnum, noticeno, noticetitle, noticedate from (select * from notice 
+order by noticedate desc, noticeno desc)) where rnum >= 1 and rnum <=3  {executed in 408 msec}
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:357] - select * from (select ROWNUM rnum, board_num, board_title, board_readcount from (select * from 
+board where board_lev=1 order by board_readcount desc)) where rnum >= 1 and rnum <=3  {executed in 408 msec}
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.execute() returned true
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.execute() returned true
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.new ResultSet returned 
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.new ResultSet returned 
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@4a81a6b8
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@76e41d54
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@53c5d40f
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@391b9991
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getType() returned 1003
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getType() returned 1003
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.isClosed() returned false
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.isClosed() returned false
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.next() returned true
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.next() returned true
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getInt(noticeno) returned 13
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(board_num) returned 13
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getString(noticetitle) returned 업로드테스트
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getString(board_title) returned 설계방식3
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(board_readcount) returned 7
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getDate(noticedate) returned 2022-09-23
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.isClosed() returned false
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.isClosed() returned false
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.next() returned true
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.next() returned true
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(board_num) returned 14
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getInt(noticeno) returned 10
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getString(board_title) returned 새 게시글 등록 테스트
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getString(noticetitle) returned 공지 서비스 오픈10
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(board_readcount) returned 3
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getDate(noticedate) returned 2022-09-21
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.isClosed() returned false
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.isClosed() returned false
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.next() returned true
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.next() returned true
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(board_num) returned 11
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getInt(noticeno) returned 9
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getString(board_title) returned MVC Model2
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getString(noticetitle) returned 공지 서비스 오픈9
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(board_readcount) returned 2
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getDate(noticedate) returned 2022-09-21
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.isClosed() returned false
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.isClosed() returned false
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.next() returned false
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.next() returned false
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.close() returned null
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.close() returned null
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@1ec7f53f
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@43183484
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@c90f842
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@41ba665a
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.close() returned 
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.close() returned 
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:543] - 1. Connection closed
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:543] - 2. Connection closed
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.close() returned 
+[12:00:49][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.close() returned 
+[12:00:49][INFO ][BoardController.java:44] - btop3.do : 3
+[12:00:49][INFO ][NoticeController.java:77] - ntop3.do : 3
+[12:00:51][INFO ][TestController.java:24] - in testViewmethod
+[12:00:59][INFO ][TestController.java:24] - in testViewmethod
+[12:01:09][INFO ][TestController.java:24] - in testViewmethod
+[12:01:26][INFO ][TestController.java:24] - in testViewmethod
+[12:02:23][INFO ][TestController.java:24] - in testViewmethod
+[12:02:49][INFO ][TestController.java:24] - in testViewmethod
+[12:07:51][INFO ][TestController.java:24] - in testViewmethod
+[12:41:57][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[12:41:58][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1326 ms
+[12:41:58][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[12:42:00][INFO ][FrameworkServlet.java:547] - Completed initialization in 1868 ms
+[12:42:01][INFO ][TestController.java:24] - in testViewmethod
+[12:42:51][INFO ][TestController.java:24] - in testViewmethod
+[12:43:24][INFO ][TestController.java:24] - in testViewmethod
+[12:43:39][INFO ][TestController.java:24] - in testViewmethod
+[12:43:53][INFO ][TestController.java:24] - in testViewmethod
+[12:45:38][INFO ][TestController.java:24] - in testViewmethod
+[12:45:43][INFO ][TestController.java:24] - in testViewmethod
+[12:52:43][INFO ][TestController.java:24] - in testViewmethod
+[12:52:54][INFO ][TestController.java:24] - in testViewmethod
+[12:53:59][INFO ][TestController.java:24] - in testViewmethod
+[12:54:28][INFO ][TestController.java:24] - in testViewmethod
+[12:57:27][INFO ][TestController.java:24] - in testViewmethod
+[12:57:34][INFO ][TestController.java:24] - in testViewmethod
+[12:59:13][INFO ][TestController.java:24] - in testViewmethod
+[12:59:31][INFO ][TestController.java:24] - in testViewmethod
+[13:03:57][INFO ][TestController.java:24] - in testViewmethod
+[13:04:18][INFO ][TestController.java:24] - in testViewmethod
+[13:04:26][INFO ][TestController.java:24] - in testViewmethod
+[14:31:07][INFO ][TestController.java:24] - in testViewmethod
+[14:31:21][INFO ][TestController.java:24] - in testViewmethod
+[14:32:28][INFO ][TestController.java:24] - in testViewmethod
+[14:32:42][INFO ][TestController.java:24] - in testViewmethod
+[14:33:13][INFO ][TestController.java:24] - in testViewmethod
+[14:33:27][INFO ][TestController.java:24] - in testViewmethod
+[14:41:40][INFO ][TestController.java:24] - in testViewmethod
+[14:42:15][INFO ][TestController.java:24] - in testViewmethod
+[14:43:25][INFO ][TestController.java:24] - in testViewmethod
+[14:44:27][INFO ][TestController.java:24] - in testViewmethod
+[14:44:50][INFO ][TestController.java:24] - in testViewmethod
+[14:58:05][INFO ][TestController.java:24] - in testViewmethod
+[14:58:40][INFO ][TestController.java:24] - in testViewmethod
+[15:10:15][INFO ][TestController.java:30] - in testViewmethod
+[16:07:53][INFO ][TestController.java:30] - in testViewmethod
+[16:07:56][INFO ][TestController.java:24] - in testViewmethod
+[16:07:58][INFO ][TestController.java:30] - in testViewmethod
+[16:08:03][INFO ][TestController.java:30] - in testViewmethod
+[16:08:07][INFO ][TestController.java:30] - in testViewmethod
+[16:09:07][INFO ][TestController.java:30] - in testViewmethod
+[16:09:31][INFO ][TestController.java:30] - in testViewmethod
+[16:09:49][INFO ][TestController.java:30] - in testViewmethod
+[16:10:09][INFO ][TestController.java:30] - in testViewmethod
+[16:18:07][INFO ][TestController.java:30] - in testViewmethod
+[16:18:30][INFO ][TestController.java:30] - in testViewmethod
+[16:20:50][INFO ][TestController.java:30] - in testViewmethod
+[16:22:29][INFO ][TestController.java:30] - in testViewmethod

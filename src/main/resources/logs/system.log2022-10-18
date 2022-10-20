@@ -1,0 +1,678 @@
+[09:44:34][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[09:44:35][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1281 ms
+[09:44:35][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[09:44:37][INFO ][FrameworkServlet.java:547] - Completed initialization in 1727 ms
+[09:44:58][INFO ][TestController.java:41] - in testViewmethod
+[09:44:58][INFO ][Slf4jSpyLogDelegator.java:524] - 1. Connection opened
+[09:44:58][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.new Connection returned 
+[09:44:58][INFO ][Slf4jSpyLogDelegator.java:524] - 2. Connection opened
+[09:44:58][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.getAutoCommit() returned true
+[09:44:58][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.new Connection returned 
+[09:44:58][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.getAutoCommit() returned true
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.new PreparedStatement returned 
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.new PreparedStatement returned 
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.prepareStatement(select *
+		from (select ROWNUM rnum, noticeno, noticetitle, noticedate 
+		    from (select * from notice
+		    		 order by noticedate desc, noticeno desc))
+		where rnum >= 1 and rnum <=3) returned net.sf.log4jdbc.PreparedStatementSpy@17a41bb4
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.prepareStatement(select *
+		from (select ROWNUM rnum, board_num, board_title, board_readcount 
+		    from (select * from board
+		    		where board_lev=1
+		    		order by board_readcount desc))
+		where rnum >= 1 and rnum <=3) returned net.sf.log4jdbc.PreparedStatementSpy@172b10ca
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:357] - select * from (select ROWNUM rnum, board_num, board_title, board_readcount from (select * from 
+board where board_lev=1 order by board_readcount desc)) where rnum >= 1 and rnum <=3  {executed in 242 msec}
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:357] - select * from (select ROWNUM rnum, noticeno, noticetitle, noticedate from (select * from notice 
+order by noticedate desc, noticeno desc)) where rnum >= 1 and rnum <=3  {executed in 242 msec}
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.execute() returned true
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.execute() returned true
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.new ResultSet returned 
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.new ResultSet returned 
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@6d856cc9
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@726eeaf1
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@4e3ecde7
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@5fa7b08c
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getType() returned 1003
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getType() returned 1003
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.isClosed() returned false
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.isClosed() returned false
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.next() returned true
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.next() returned true
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(board_num) returned 13
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getInt(noticeno) returned 14
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getString(board_title) returned 설계방식3
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getString(noticetitle) returned 제목99테스트
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(board_readcount) returned 7
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.isClosed() returned false
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getDate(noticedate) returned 2022-10-17
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.isClosed() returned false
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.next() returned true
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.next() returned true
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getInt(noticeno) returned 13
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(board_num) returned 14
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getString(noticetitle) returned 업로드테스트
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getString(board_title) returned 새 게시글 등록 테스트
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getDate(noticedate) returned 2022-09-23
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(board_readcount) returned 3
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.isClosed() returned false
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.isClosed() returned false
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.next() returned true
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.next() returned true
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getInt(noticeno) returned 10
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(board_num) returned 11
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getString(noticetitle) returned 공지 서비스 오픈10
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getString(board_title) returned MVC Model2
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getDate(noticedate) returned 2022-09-21
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.isClosed() returned false
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(board_readcount) returned 2
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.isClosed() returned false
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.next() returned false
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.next() returned false
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.close() returned null
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.close() returned null
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@33e611da
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@74678be7
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@7503d157
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@5aa014cc
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.close() returned 
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.close() returned 
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:543] - 1. Connection closed
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:543] - 2. Connection closed
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.close() returned 
+[09:44:59][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.close() returned 
+[09:44:59][INFO ][BoardController.java:44] - btop3.do : 3
+[09:44:59][INFO ][NoticeController.java:77] - ntop3.do : 3
+[09:45:00][INFO ][TestController.java:59] - in testViewmethod
+[09:48:12][INFO ][TestController.java:59] - in testViewmethod
+[09:49:26][INFO ][TestController.java:59] - in testViewmethod
+[09:49:48][INFO ][TestController.java:59] - in testViewmethod
+[09:50:51][INFO ][TestController.java:59] - in testViewmethod
+[09:51:35][INFO ][TestController.java:59] - in testViewmethod
+[09:57:24][INFO ][TestController.java:59] - in testViewmethod
+[09:57:47][INFO ][TestController.java:59] - in testViewmethod
+[10:05:40][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[10:05:41][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1313 ms
+[10:05:41][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[10:05:43][INFO ][FrameworkServlet.java:547] - Completed initialization in 1872 ms
+[10:05:51][INFO ][TestController.java:59] - in testViewmethod
+[10:06:05][INFO ][TestController.java:227] - run test6.do ...
+[10:11:18][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[10:11:19][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1201 ms
+[10:11:19][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[10:11:21][INFO ][FrameworkServlet.java:547] - Completed initialization in 1793 ms
+[10:11:25][INFO ][TestController.java:60] - in testViewmethod
+[10:11:35][WARN ][AbstractHandlerExceptionResolver.java:208] - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported]
+[10:14:25][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[10:14:26][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1328 ms
+[10:14:26][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[10:14:28][INFO ][FrameworkServlet.java:547] - Completed initialization in 1847 ms
+[10:14:32][INFO ][TestController.java:60] - in testViewmethod
+[10:14:45][WARN ][AbstractHandlerExceptionResolver.java:208] - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported]
+[10:15:49][INFO ][TestController.java:60] - in testViewmethod
+[10:15:59][WARN ][AbstractHandlerExceptionResolver.java:208] - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'undefined': was expecting ('true', 'false' or 'null'); nested exception is com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'undefined': was expecting ('true', 'false' or 'null')<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 11]]
+[10:16:53][INFO ][TestController.java:60] - in testViewmethod
+[10:17:02][WARN ][AbstractHandlerExceptionResolver.java:208] - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'jar': was expecting ('true', 'false' or 'null'); nested exception is com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'jar': was expecting ('true', 'false' or 'null')<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 5]]
+[10:19:18][INFO ][TestController.java:60] - in testViewmethod
+[10:19:25][WARN ][AbstractHandlerExceptionResolver.java:208] - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'undefined': was expecting ('true', 'false' or 'null'); nested exception is com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'undefined': was expecting ('true', 'false' or 'null')<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 11]]
+[10:19:38][INFO ][TestController.java:60] - in testViewmethod
+[10:19:43][WARN ][AbstractHandlerExceptionResolver.java:208] - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported]
+[10:20:03][INFO ][TestController.java:60] - in testViewmethod
+[10:20:14][INFO ][TestController.java:60] - in testViewmethod
+[10:20:19][WARN ][AbstractHandlerExceptionResolver.java:208] - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported]
+[10:23:28][INFO ][TestController.java:60] - in testViewmethod
+[10:23:33][WARN ][AbstractHandlerExceptionResolver.java:208] - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported]
+[10:26:53][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[10:26:54][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1205 ms
+[10:26:54][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[10:26:56][INFO ][FrameworkServlet.java:547] - Completed initialization in 1785 ms
+[10:26:57][INFO ][TestController.java:60] - in testViewmethod
+[10:27:03][WARN ][AbstractHandlerExceptionResolver.java:208] - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'undefined': was expecting ('true', 'false' or 'null'); nested exception is com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'undefined': was expecting ('true', 'false' or 'null')<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 11]]
+[10:27:54][INFO ][TestController.java:60] - in testViewmethod
+[10:27:59][WARN ][AbstractHandlerExceptionResolver.java:208] - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'data': was expecting ('true', 'false' or 'null'); nested exception is com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'data': was expecting ('true', 'false' or 'null')<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 6]]
+[10:28:43][INFO ][TestController.java:60] - in testViewmethod
+[10:28:48][INFO ][TestController.java:228] - run test6.do ...
+[10:28:48][INFO ][TestController.java:232] - [{title=111, writer=admin, content=ㄴ111}, {title=222, writer=admin, content=ㄴ222}]
+[10:33:16][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[10:33:18][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1243 ms
+[10:33:18][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[10:33:20][INFO ][FrameworkServlet.java:547] - Completed initialization in 1778 ms
+[10:33:22][INFO ][TestController.java:61] - in testViewmethod
+[10:33:31][INFO ][TestController.java:229] - run test6.do ...
+[10:33:31][INFO ][TestController.java:233] - [Ljava.util.Map;@43f3b409
+[10:35:12][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[10:35:14][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1302 ms
+[10:35:14][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[10:35:16][INFO ][FrameworkServlet.java:547] - Completed initialization in 1882 ms
+[10:35:16][INFO ][TestController.java:61] - in testViewmethod
+[10:35:25][WARN ][AbstractHandlerExceptionResolver.java:208] - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `com.test.first.notice.model.vo.Notice` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('111'); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.test.first.notice.model.vo.Notice` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('111')<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 11] (through reference chain: java.lang.Object[][0]->java.util.LinkedHashMap["title"])]
+[10:36:28][INFO ][TestController.java:61] - in testViewmethod
+[10:36:32][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[10:36:34][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1285 ms
+[10:36:34][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[10:36:36][INFO ][FrameworkServlet.java:547] - Completed initialization in 1864 ms
+[10:36:37][INFO ][TestController.java:61] - in testViewmethod
+[10:36:47][WARN ][AbstractHandlerExceptionResolver.java:208] - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `java.util.ArrayList` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList` out of START_OBJECT token<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 2] (through reference chain: java.lang.Object[][0])]
+[10:37:36][INFO ][TestController.java:61] - in testViewmethod
+[10:37:43][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[10:37:44][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1248 ms
+[10:37:44][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[10:37:46][INFO ][FrameworkServlet.java:547] - Completed initialization in 1855 ms
+[10:37:49][INFO ][TestController.java:61] - in testViewmethod
+[10:37:54][INFO ][TestController.java:229] - run test6.do ...
+[10:37:54][INFO ][TestController.java:232] - [Lcom.test.first.notice.model.vo.Notice;@3f4a652e
+[10:38:25][INFO ][TestController.java:61] - in testViewmethod
+[10:38:29][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[10:38:30][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1246 ms
+[10:38:30][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[10:38:32][INFO ][FrameworkServlet.java:547] - Completed initialization in 1757 ms
+[10:38:35][INFO ][TestController.java:61] - in testViewmethod
+[10:38:48][INFO ][TestController.java:229] - run test6.do ...
+[10:38:48][INFO ][TestController.java:233] - Notice [noticeno=0, noticetitle=null, noticedate=null, noticewriter=null, noticecontent=null, original_filepath=null, rename_filepath=null]
+[10:38:48][INFO ][TestController.java:233] - Notice [noticeno=0, noticetitle=null, noticedate=null, noticewriter=null, noticecontent=null, original_filepath=null, rename_filepath=null]
+[10:39:25][INFO ][TestController.java:61] - in testViewmethod
+[10:39:31][INFO ][TestController.java:229] - run test6.do ...
+[10:39:31][INFO ][TestController.java:233] - Notice [noticeno=0, noticetitle=null, noticedate=null, noticewriter=null, noticecontent=null, original_filepath=null, rename_filepath=null]
+[10:39:31][INFO ][TestController.java:233] - Notice [noticeno=0, noticetitle=null, noticedate=null, noticewriter=null, noticecontent=null, original_filepath=null, rename_filepath=null]
+[10:39:48][INFO ][TestController.java:61] - in testViewmethod
+[10:39:52][INFO ][TestController.java:229] - run test6.do ...
+[10:39:52][INFO ][TestController.java:233] - Notice [noticeno=0, noticetitle=111, noticedate=null, noticewriter=admin, noticecontent=ㄴ111, original_filepath=null, rename_filepath=null]
+[10:39:52][INFO ][TestController.java:233] - Notice [noticeno=0, noticetitle=222, noticedate=null, noticewriter=admin, noticecontent=ㄴ222, original_filepath=null, rename_filepath=null]
+[10:41:18][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[10:41:19][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1255 ms
+[10:41:19][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[10:41:21][INFO ][FrameworkServlet.java:547] - Completed initialization in 1793 ms
+[10:41:34][INFO ][TestController.java:61] - in testViewmethod
+[10:41:45][INFO ][TestController.java:229] - run test6.do ...
+[10:41:45][INFO ][TestController.java:233] - Notice [noticeno=0, noticetitle=1111111, noticedate=null, noticewriter=admin, noticecontent=ㄴ111111, original_filepath=null, rename_filepath=null]
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:524] - 1. Connection opened
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.new Connection returned 
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.getAutoCommit() returned true
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.new PreparedStatement returned 
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.prepareStatement(insert into 
+		notice(noticeno, noticetitle, noticewriter, noticedate, original_filepath, rename_filepath, noticecontent ) 
+		values((select max(noticeno)+1 from notice), 	
+		
+		?, ?, sysdate, ?, ?, ? )) returned net.sf.log4jdbc.PreparedStatementSpy@bd805e4
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.setString(1, "1111111") returned 
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.setString(2, "admin") returned 
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.setNull(3, 12) returned 
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.setNull(4, 12) returned 
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.setString(5, "ㄴ111111") returned 
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:357] - insert into notice(noticeno, noticetitle, noticewriter, noticedate, original_filepath, rename_filepath, 
+noticecontent ) values((select max(noticeno)+1 from notice), '1111111', 'admin', sysdate, NULL, 
+NULL, 'ㄴ111111' )  {executed in 43 msec}
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.execute() returned false
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.getUpdateCount() returned 1
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.close() returned 
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:543] - 1. Connection closed
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.close() returned 
+[10:41:46][INFO ][TestController.java:233] - Notice [noticeno=0, noticetitle=22222, noticedate=null, noticewriter=admin, noticecontent=ㄴ22222, original_filepath=null, rename_filepath=null]
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:524] - 2. Connection opened
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.new Connection returned 
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.getAutoCommit() returned true
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.new PreparedStatement returned 
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.prepareStatement(insert into 
+		notice(noticeno, noticetitle, noticewriter, noticedate, original_filepath, rename_filepath, noticecontent ) 
+		values((select max(noticeno)+1 from notice), 	
+		
+		?, ?, sysdate, ?, ?, ? )) returned net.sf.log4jdbc.PreparedStatementSpy@77407049
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.setString(1, "22222") returned 
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.setString(2, "admin") returned 
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.setNull(3, 12) returned 
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.setNull(4, 12) returned 
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.setString(5, "ㄴ22222") returned 
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:357] - insert into notice(noticeno, noticetitle, noticewriter, noticedate, original_filepath, rename_filepath, 
+noticecontent ) values((select max(noticeno)+1 from notice), '22222', 'admin', sysdate, NULL, 
+NULL, 'ㄴ22222' )  {executed in 1 msec}
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.execute() returned false
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.getUpdateCount() returned 1
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.close() returned 
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:543] - 2. Connection closed
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.close() returned 
+[10:41:46][INFO ][TestController.java:233] - Notice [noticeno=0, noticetitle=33333, noticedate=null, noticewriter=admin, noticecontent=ㄴ33333, original_filepath=null, rename_filepath=null]
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:524] - 3. Connection opened
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 3. Connection.new Connection returned 
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 3. Connection.getAutoCommit() returned true
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 3. PreparedStatement.new PreparedStatement returned 
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 3. Connection.prepareStatement(insert into 
+		notice(noticeno, noticetitle, noticewriter, noticedate, original_filepath, rename_filepath, noticecontent ) 
+		values((select max(noticeno)+1 from notice), 	
+		
+		?, ?, sysdate, ?, ?, ? )) returned net.sf.log4jdbc.PreparedStatementSpy@ff3f561
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 3. PreparedStatement.setString(1, "33333") returned 
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 3. PreparedStatement.setString(2, "admin") returned 
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 3. PreparedStatement.setNull(3, 12) returned 
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 3. PreparedStatement.setNull(4, 12) returned 
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 3. PreparedStatement.setString(5, "ㄴ33333") returned 
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:357] - insert into notice(noticeno, noticetitle, noticewriter, noticedate, original_filepath, rename_filepath, 
+noticecontent ) values((select max(noticeno)+1 from notice), '33333', 'admin', sysdate, NULL, 
+NULL, 'ㄴ33333' )  {executed in 2 msec}
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 3. PreparedStatement.execute() returned false
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 3. PreparedStatement.getUpdateCount() returned 1
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 3. PreparedStatement.close() returned 
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:543] - 3. Connection closed
+[10:41:46][INFO ][Slf4jSpyLogDelegator.java:171] - 3. Connection.close() returned 
+[10:42:22][INFO ][Slf4jSpyLogDelegator.java:524] - 4. Connection opened
+[10:42:22][INFO ][Slf4jSpyLogDelegator.java:171] - 4. Connection.new Connection returned 
+[10:42:22][INFO ][Slf4jSpyLogDelegator.java:171] - 4. Connection.getAutoCommit() returned true
+[10:42:22][INFO ][Slf4jSpyLogDelegator.java:171] - 4. PreparedStatement.new PreparedStatement returned 
+[10:42:22][INFO ][Slf4jSpyLogDelegator.java:171] - 4. Connection.prepareStatement(select *
+		from (select ROWNUM rnum, noticeno, noticetitle, noticedate 
+		    from (select * from notice
+		    		 order by noticedate desc, noticeno desc))
+		where rnum >= 1 and rnum <=3) returned net.sf.log4jdbc.PreparedStatementSpy@a796b16
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:524] - 5. Connection opened
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. Connection.new Connection returned 
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. Connection.getAutoCommit() returned true
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. PreparedStatement.new PreparedStatement returned 
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. Connection.prepareStatement(select *
+		from (select ROWNUM rnum, board_num, board_title, board_readcount 
+		    from (select * from board
+		    		where board_lev=1
+		    		order by board_readcount desc))
+		where rnum >= 1 and rnum <=3) returned net.sf.log4jdbc.PreparedStatementSpy@279a3ec7
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:357] - select * from (select ROWNUM rnum, board_num, board_title, board_readcount from (select * from 
+board where board_lev=1 order by board_readcount desc)) where rnum >= 1 and rnum <=3  {executed in 18 msec}
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:357] - select * from (select ROWNUM rnum, noticeno, noticetitle, noticedate from (select * from notice 
+order by noticedate desc, noticeno desc)) where rnum >= 1 and rnum <=3  {executed in 200 msec}
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. PreparedStatement.execute() returned true
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 4. PreparedStatement.execute() returned true
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.new ResultSet returned 
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.new ResultSet returned 
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@28fbb38c
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 4. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@6fc24de7
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@3153f3bc
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@66d04b8b
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.getType() returned 1003
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.getType() returned 1003
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.isClosed() returned false
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.isClosed() returned false
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.next() returned true
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.next() returned true
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.getInt(board_num) returned 13
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.getInt(noticeno) returned 17
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.getString(board_title) returned 설계방식3
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.getString(noticetitle) returned 33333
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.getInt(board_readcount) returned 7
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.isClosed() returned false
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.getDate(noticedate) returned 2022-10-18
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.next() returned true
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.isClosed() returned false
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.getInt(board_num) returned 14
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.next() returned true
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.getString(board_title) returned 새 게시글 등록 테스트
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.getInt(noticeno) returned 16
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.getInt(board_readcount) returned 3
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.getString(noticetitle) returned 22222
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.isClosed() returned false
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.getDate(noticedate) returned 2022-10-18
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.isClosed() returned false
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.next() returned true
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.next() returned true
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.getInt(board_num) returned 11
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.getInt(noticeno) returned 15
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.getString(noticetitle) returned 1111111
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.getString(board_title) returned MVC Model2
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.getDate(noticedate) returned 2022-10-18
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.getInt(board_readcount) returned 2
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.isClosed() returned false
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.isClosed() returned false
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.next() returned false
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.next() returned false
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 4. ResultSet.close() returned null
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. ResultSet.close() returned null
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 4. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@36eff9de
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@5bea9220
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 4. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@202dcd05
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@1db414c6
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 4. PreparedStatement.close() returned 
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. PreparedStatement.close() returned 
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:543] - 5. Connection closed
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:543] - 4. Connection closed
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 5. Connection.close() returned 
+[10:42:23][INFO ][Slf4jSpyLogDelegator.java:171] - 4. Connection.close() returned 
+[10:42:23][INFO ][BoardController.java:44] - btop3.do : 3
+[10:42:23][INFO ][NoticeController.java:77] - ntop3.do : 3
+[10:42:25][INFO ][Slf4jSpyLogDelegator.java:524] - 6. Connection opened
+[10:42:25][INFO ][Slf4jSpyLogDelegator.java:171] - 6. Connection.new Connection returned 
+[10:42:25][INFO ][Slf4jSpyLogDelegator.java:171] - 6. Connection.getAutoCommit() returned true
+[10:42:25][INFO ][Slf4jSpyLogDelegator.java:171] - 6. PreparedStatement.new PreparedStatement returned 
+[10:42:25][INFO ][Slf4jSpyLogDelegator.java:171] - 6. Connection.prepareStatement(select * from notice
+		where noticeno = ?) returned net.sf.log4jdbc.PreparedStatementSpy@1a56f39f
+[10:42:25][INFO ][Slf4jSpyLogDelegator.java:171] - 6. PreparedStatement.setInt(1, 17) returned 
+[10:42:25][INFO ][Slf4jSpyLogDelegator.java:357] - select * from notice where noticeno = 17  {executed in 2 msec}
+[10:42:25][INFO ][Slf4jSpyLogDelegator.java:171] - 6. PreparedStatement.execute() returned true
+[10:42:25][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.new ResultSet returned 
+[10:42:25][INFO ][Slf4jSpyLogDelegator.java:171] - 6. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@18a6c503
+[10:42:25][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@5245f8f1
+[10:42:25][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.getType() returned 1003
+[10:42:25][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.isClosed() returned false
+[10:42:25][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.next() returned true
+[10:42:25][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.getInt(noticeno) returned 17
+[10:42:25][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.getString(noticetitle) returned 33333
+[10:42:25][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.getDate(noticedate) returned 2022-10-18
+[10:42:25][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.getString(noticewriter) returned admin
+[10:42:25][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.getString(noticecontent) returned ㄴ33333
+[10:42:25][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.getString(original_filepath) returned null
+[10:42:25][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.getString(rename_filepath) returned null
+[10:42:25][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.isClosed() returned false
+[10:42:25][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.next() returned false
+[10:42:25][INFO ][Slf4jSpyLogDelegator.java:171] - 6. ResultSet.close() returned null
+[10:42:25][INFO ][Slf4jSpyLogDelegator.java:171] - 6. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@618952a4
+[10:42:25][INFO ][Slf4jSpyLogDelegator.java:171] - 6. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@1db414c6
+[10:42:25][INFO ][Slf4jSpyLogDelegator.java:171] - 6. PreparedStatement.close() returned 
+[10:42:25][INFO ][Slf4jSpyLogDelegator.java:543] - 6. Connection closed
+[10:42:25][INFO ][Slf4jSpyLogDelegator.java:171] - 6. Connection.close() returned 
+[10:42:52][INFO ][TestController.java:61] - in testViewmethod
+[10:43:02][INFO ][TestController.java:229] - run test6.do ...
+[10:43:02][INFO ][TestController.java:233] - Notice [noticeno=0, noticetitle=t11, noticedate=null, noticewriter=admin, noticecontent=s111, original_filepath=null, rename_filepath=null]
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:524] - 7. Connection opened
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:171] - 7. Connection.new Connection returned 
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:171] - 7. Connection.getAutoCommit() returned true
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:171] - 7. PreparedStatement.new PreparedStatement returned 
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:171] - 7. Connection.prepareStatement(insert into 
+		notice(noticeno, noticetitle, noticewriter, noticedate, original_filepath, rename_filepath, noticecontent ) 
+		values((select max(noticeno)+1 from notice), 	
+		
+		?, ?, sysdate, ?, ?, ? )) returned net.sf.log4jdbc.PreparedStatementSpy@7b0665d0
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:171] - 7. PreparedStatement.setString(1, "t11") returned 
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:171] - 7. PreparedStatement.setString(2, "admin") returned 
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:171] - 7. PreparedStatement.setNull(3, 12) returned 
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:171] - 7. PreparedStatement.setNull(4, 12) returned 
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:171] - 7. PreparedStatement.setString(5, "s111") returned 
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:357] - insert into notice(noticeno, noticetitle, noticewriter, noticedate, original_filepath, rename_filepath, 
+noticecontent ) values((select max(noticeno)+1 from notice), 't11', 'admin', sysdate, NULL, 
+NULL, 's111' )  {executed in 2 msec}
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:171] - 7. PreparedStatement.execute() returned false
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:171] - 7. PreparedStatement.getUpdateCount() returned 1
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:171] - 7. PreparedStatement.close() returned 
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:543] - 7. Connection closed
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:171] - 7. Connection.close() returned 
+[10:43:02][INFO ][TestController.java:233] - Notice [noticeno=0, noticetitle=t22, noticedate=null, noticewriter=admin, noticecontent=s222, original_filepath=null, rename_filepath=null]
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:524] - 8. Connection opened
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:171] - 8. Connection.new Connection returned 
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:171] - 8. Connection.getAutoCommit() returned true
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:171] - 8. PreparedStatement.new PreparedStatement returned 
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:171] - 8. Connection.prepareStatement(insert into 
+		notice(noticeno, noticetitle, noticewriter, noticedate, original_filepath, rename_filepath, noticecontent ) 
+		values((select max(noticeno)+1 from notice), 	
+		
+		?, ?, sysdate, ?, ?, ? )) returned net.sf.log4jdbc.PreparedStatementSpy@687b8556
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:171] - 8. PreparedStatement.setString(1, "t22") returned 
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:171] - 8. PreparedStatement.setString(2, "admin") returned 
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:171] - 8. PreparedStatement.setNull(3, 12) returned 
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:171] - 8. PreparedStatement.setNull(4, 12) returned 
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:171] - 8. PreparedStatement.setString(5, "s222") returned 
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:357] - insert into notice(noticeno, noticetitle, noticewriter, noticedate, original_filepath, rename_filepath, 
+noticecontent ) values((select max(noticeno)+1 from notice), 't22', 'admin', sysdate, NULL, 
+NULL, 's222' )  {executed in 1 msec}
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:171] - 8. PreparedStatement.execute() returned false
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:171] - 8. PreparedStatement.getUpdateCount() returned 1
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:171] - 8. PreparedStatement.close() returned 
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:543] - 8. Connection closed
+[10:43:02][INFO ][Slf4jSpyLogDelegator.java:171] - 8. Connection.close() returned 
+[10:49:24][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[10:49:26][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1252 ms
+[10:49:26][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[10:49:27][INFO ][FrameworkServlet.java:547] - Completed initialization in 1778 ms
+[10:49:28][INFO ][TestController.java:61] - in testViewmethod
+[10:49:49][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[10:49:50][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1240 ms
+[10:49:50][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[10:49:52][INFO ][FrameworkServlet.java:547] - Completed initialization in 1768 ms
+[10:49:52][INFO ][TestController.java:61] - in testViewmethod
+[10:50:09][INFO ][TestController.java:229] - run test6.do ...
+[10:50:09][INFO ][TestController.java:232] - Notice [noticeno=0, noticetitle=테스트1, noticedate=null, noticewriter=admin, noticecontent=1테내용, original_filepath=null, rename_filepath=null]
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:524] - 1. Connection opened
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.new Connection returned 
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.getAutoCommit() returned true
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.new PreparedStatement returned 
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.prepareStatement(insert into 
+		notice(noticeno, noticetitle, noticewriter, noticedate, original_filepath, rename_filepath, noticecontent ) 
+		values((select max(noticeno)+1 from notice), 	
+		
+		?, ?, sysdate, ?, ?, ? )) returned net.sf.log4jdbc.PreparedStatementSpy@7085f338
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.setString(1, "테스트1") returned 
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.setString(2, "admin") returned 
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.setNull(3, 12) returned 
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.setNull(4, 12) returned 
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.setString(5, "1테내용") returned 
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:357] - insert into notice(noticeno, noticetitle, noticewriter, noticedate, original_filepath, rename_filepath, 
+noticecontent ) values((select max(noticeno)+1 from notice), '테스트1', 'admin', sysdate, NULL, 
+NULL, '1테내용' )  {executed in 7 msec}
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.execute() returned false
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.getUpdateCount() returned 1
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.close() returned 
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:543] - 1. Connection closed
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.close() returned 
+[10:50:10][INFO ][TestController.java:232] - Notice [noticeno=0, noticetitle=테스트2, noticedate=null, noticewriter=admin, noticecontent=2테내용, original_filepath=null, rename_filepath=null]
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:524] - 2. Connection opened
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.new Connection returned 
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.getAutoCommit() returned true
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.new PreparedStatement returned 
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.prepareStatement(insert into 
+		notice(noticeno, noticetitle, noticewriter, noticedate, original_filepath, rename_filepath, noticecontent ) 
+		values((select max(noticeno)+1 from notice), 	
+		
+		?, ?, sysdate, ?, ?, ? )) returned net.sf.log4jdbc.PreparedStatementSpy@65a487c
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.setString(1, "테스트2") returned 
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.setString(2, "admin") returned 
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.setNull(3, 12) returned 
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.setNull(4, 12) returned 
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.setString(5, "2테내용") returned 
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:357] - insert into notice(noticeno, noticetitle, noticewriter, noticedate, original_filepath, rename_filepath, 
+noticecontent ) values((select max(noticeno)+1 from notice), '테스트2', 'admin', sysdate, NULL, 
+NULL, '2테내용' )  {executed in 1 msec}
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.execute() returned false
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.getUpdateCount() returned 1
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.close() returned 
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:543] - 2. Connection closed
+[10:50:10][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.close() returned 
+[10:55:00][INFO ][TestController.java:61] - in testViewmethod
+[10:55:06][INFO ][TestController.java:229] - run test6.do ...
+[10:55:06][INFO ][TestController.java:232] - Notice [noticeno=0, noticetitle=11, noticedate=null, noticewriter=admin, noticecontent=ㄴ11, original_filepath=null, rename_filepath=null]
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:524] - 3. Connection opened
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:171] - 3. Connection.new Connection returned 
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:171] - 3. Connection.getAutoCommit() returned true
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:171] - 3. PreparedStatement.new PreparedStatement returned 
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:171] - 3. Connection.prepareStatement(insert into 
+		notice(noticeno, noticetitle, noticewriter, noticedate, original_filepath, rename_filepath, noticecontent ) 
+		values((select max(noticeno)+1 from notice), 	
+		
+		?, ?, sysdate, ?, ?, ? )) returned net.sf.log4jdbc.PreparedStatementSpy@7c5c8061
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:171] - 3. PreparedStatement.setString(1, "11") returned 
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:171] - 3. PreparedStatement.setString(2, "admin") returned 
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:171] - 3. PreparedStatement.setNull(3, 12) returned 
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:171] - 3. PreparedStatement.setNull(4, 12) returned 
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:171] - 3. PreparedStatement.setString(5, "ㄴ11") returned 
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:357] - insert into notice(noticeno, noticetitle, noticewriter, noticedate, original_filepath, rename_filepath, 
+noticecontent ) values((select max(noticeno)+1 from notice), '11', 'admin', sysdate, NULL, 
+NULL, 'ㄴ11' )  {executed in 2 msec}
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:171] - 3. PreparedStatement.execute() returned false
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:171] - 3. PreparedStatement.getUpdateCount() returned 1
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:171] - 3. PreparedStatement.close() returned 
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:543] - 3. Connection closed
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:171] - 3. Connection.close() returned 
+[10:55:06][INFO ][TestController.java:232] - Notice [noticeno=0, noticetitle=22, noticedate=null, noticewriter=admin, noticecontent=ㄴ22, original_filepath=null, rename_filepath=null]
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:524] - 4. Connection opened
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:171] - 4. Connection.new Connection returned 
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:171] - 4. Connection.getAutoCommit() returned true
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:171] - 4. PreparedStatement.new PreparedStatement returned 
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:171] - 4. Connection.prepareStatement(insert into 
+		notice(noticeno, noticetitle, noticewriter, noticedate, original_filepath, rename_filepath, noticecontent ) 
+		values((select max(noticeno)+1 from notice), 	
+		
+		?, ?, sysdate, ?, ?, ? )) returned net.sf.log4jdbc.PreparedStatementSpy@729b619a
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:171] - 4. PreparedStatement.setString(1, "22") returned 
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:171] - 4. PreparedStatement.setString(2, "admin") returned 
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:171] - 4. PreparedStatement.setNull(3, 12) returned 
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:171] - 4. PreparedStatement.setNull(4, 12) returned 
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:171] - 4. PreparedStatement.setString(5, "ㄴ22") returned 
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:357] - insert into notice(noticeno, noticetitle, noticewriter, noticedate, original_filepath, rename_filepath, 
+noticecontent ) values((select max(noticeno)+1 from notice), '22', 'admin', sysdate, NULL, 
+NULL, 'ㄴ22' )  {executed in 2 msec}
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:171] - 4. PreparedStatement.execute() returned false
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:171] - 4. PreparedStatement.getUpdateCount() returned 1
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:171] - 4. PreparedStatement.close() returned 
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:543] - 4. Connection closed
+[10:55:06][INFO ][Slf4jSpyLogDelegator.java:171] - 4. Connection.close() returned 
+[10:55:29][INFO ][TestController.java:61] - in testViewmethod
+[10:55:35][WARN ][AbstractHandlerExceptionResolver.java:208] - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported]
+[11:18:31][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[11:18:32][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1320 ms
+[11:18:32][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[11:18:35][INFO ][FrameworkServlet.java:547] - Completed initialization in 2079 ms
+[11:18:35][INFO ][TestController.java:43] - in testViewmethod
+[11:18:37][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[11:34:08][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[11:34:10][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1322 ms
+[11:34:10][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[11:34:12][INFO ][FrameworkServlet.java:547] - Completed initialization in 2095 ms
+[11:34:21][INFO ][TestController.java:66] - in testAjaxFileViewMethod
+[11:34:27][WARN ][AbstractHandlerExceptionResolver.java:208] - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'message' for method parameter type String is not present]
+[11:35:57][INFO ][TestController.java:66] - in testAjaxFileViewMethod
+[11:36:01][INFO ][TestController.java:78] - 1231231
+[11:36:01][INFO ][TestController.java:79] - [2차 프로젝트] DB 설계보고서.pdf
+[11:43:39][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[11:43:41][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1454 ms
+[11:43:41][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[11:43:43][INFO ][FrameworkServlet.java:547] - Completed initialization in 2099 ms
+[11:43:44][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[11:43:53][INFO ][TestController.java:79] - 업로드테스트
+[11:43:53][INFO ][TestController.java:80] - [2차 프로젝트] DB 설계보고서.pdf
+[11:44:46][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[11:44:50][INFO ][TestController.java:79] - 1
+[11:44:50][INFO ][TestController.java:80] - [2차 프로젝트] DB 설계보고서.pdf
+[11:45:01][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[11:45:04][WARN ][AbstractHandlerExceptionResolver.java:208] - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'message' for method parameter type String is not present]
+[11:45:14][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[11:45:48][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[12:16:20][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[12:18:40][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[12:19:15][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[12:22:45][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[12:23:24][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[12:24:41][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[12:24:52][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[12:25:16][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[12:27:38][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[12:27:41][INFO ][TestController.java:79] - 213
+[12:27:41][INFO ][TestController.java:80] - ph6.jpg
+[12:27:58][INFO ][TestController.java:79] - 123121
+[12:27:58][INFO ][TestController.java:80] - photo1.jpg
+[12:39:21][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[12:39:42][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[12:39:59][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[12:40:05][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[12:40:57][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[12:41:24][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[12:41:31][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[12:41:34][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[12:41:51][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[12:42:09][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[12:42:20][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[12:42:28][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[12:42:35][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[12:42:56][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[12:43:02][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[12:43:03][INFO ][TestController.java:79] - 
+[12:43:03][INFO ][TestController.java:80] - 
+[12:43:12][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[12:43:19][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[12:43:23][INFO ][TestController.java:67] - in testAjaxFileViewMethod
+[14:43:03][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[14:43:04][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1502 ms
+[14:43:04][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[14:43:06][INFO ][FrameworkServlet.java:547] - Completed initialization in 2123 ms
+[14:43:10][INFO ][TestController.java:61] - in testViewmethod
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:524] - 1. Connection opened
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:524] - 2. Connection opened
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.new Connection returned 
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.new Connection returned 
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.getAutoCommit() returned true
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.getAutoCommit() returned true
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.new PreparedStatement returned 
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.prepareStatement(select *
+		from (select ROWNUM rnum, noticeno, noticetitle, noticedate 
+		    from (select * from notice
+		    		 order by noticedate desc, noticeno desc))
+		where rnum >= 1 and rnum <=3) returned net.sf.log4jdbc.PreparedStatementSpy@fa99075
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.new PreparedStatement returned 
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.prepareStatement(select *
+		from (select ROWNUM rnum, board_num, board_title, board_readcount 
+		    from (select * from board
+		    		where board_lev=1
+		    		order by board_readcount desc))
+		where rnum >= 1 and rnum <=3) returned net.sf.log4jdbc.PreparedStatementSpy@3a3f31a1
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:357] - select * from (select ROWNUM rnum, board_num, board_title, board_readcount from (select * from 
+board where board_lev=1 order by board_readcount desc)) where rnum >= 1 and rnum <=3  {executed in 206 msec}
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:357] - select * from (select ROWNUM rnum, noticeno, noticetitle, noticedate from (select * from notice 
+order by noticedate desc, noticeno desc)) where rnum >= 1 and rnum <=3  {executed in 206 msec}
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.execute() returned true
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.execute() returned true
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.new ResultSet returned 
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@28c7dd1
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.new ResultSet returned 
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@419f24ab
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@10b466a7
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@7d3755af
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getType() returned 1003
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getType() returned 1003
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.isClosed() returned false
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.isClosed() returned false
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.next() returned true
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.next() returned true
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(board_num) returned 13
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getInt(noticeno) returned 23
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getString(board_title) returned 설계방식3
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getString(noticetitle) returned 22
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(board_readcount) returned 7
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.isClosed() returned false
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.next() returned true
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getDate(noticedate) returned 2022-10-18
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(board_num) returned 14
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getString(board_title) returned 새 게시글 등록 테스트
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(board_readcount) returned 3
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.isClosed() returned false
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.next() returned true
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.isClosed() returned false
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(board_num) returned 11
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.next() returned true
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getString(board_title) returned MVC Model2
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.getInt(board_readcount) returned 2
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.isClosed() returned false
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getInt(noticeno) returned 22
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getString(noticetitle) returned 11
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getDate(noticedate) returned 2022-10-18
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.isClosed() returned false
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.next() returned true
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getInt(noticeno) returned 21
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getString(noticetitle) returned 테스트2
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.getDate(noticedate) returned 2022-10-18
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.isClosed() returned false
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.next() returned false
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. ResultSet.close() returned null
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.next() returned false
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@494dafd7
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. ResultSet.close() returned null
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@5361b090
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@13732fa0
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. PreparedStatement.close() returned 
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@43e1b48e
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. PreparedStatement.close() returned 
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:543] - 1. Connection closed
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 1. Connection.close() returned 
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:543] - 2. Connection closed
+[14:43:20][INFO ][Slf4jSpyLogDelegator.java:171] - 2. Connection.close() returned 
+[14:43:20][INFO ][BoardController.java:44] - btop3.do : 3
+[14:43:20][INFO ][NoticeController.java:77] - ntop3.do : 3
+[14:43:26][INFO ][TestController.java:43] - in testViewmethod
+[14:43:27][INFO ][TestController.java:68] - in testAjaxFileViewMethod
+[14:44:52][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[14:44:54][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1273 ms
+[14:44:54][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[14:44:56][INFO ][FrameworkServlet.java:547] - Completed initialization in 1864 ms
+[14:45:00][INFO ][TestController.java:68] - in testAjaxFileViewMethod
+[15:49:27][INFO ][TestController.java:68] - in testAjaxFileViewMethod

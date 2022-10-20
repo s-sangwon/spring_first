@@ -1,0 +1,28 @@
+-상호
+string: 상호
+string: (주)
+index: <3 string: ~대표
+-사업자등록번호
+format: --____
+string: 사업자번호
+index: <10 string: 번호
+-내실금액
+string: 내실금액
+-결제금액
+string: 결제금액
+-합계금액
+string: 합계금액
+-합계
+string: 합계
+string: 총액
+-승인금액:
+string: 승인금액
+-받을금액:
+string: 받을금액
+-지불액
+location: >내실금액
+location: >결제금액
+location: >합계금액
+location: >합계
+location: >승인금액
+location: >받을금액
